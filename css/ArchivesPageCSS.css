@@ -1,0 +1,36 @@
+#table {
+	width: 1100px;
+	margin-left: 10px;
+}
+td {
+	padding: 5px;
+ }
+#TitleArchivesPage {
+	position: relative;
+	left:250px; 
+	top:-45px;
+	color:#FFF;
+	font-size:25px;
+}
+
+#navULArchivesPage{
+	width:1200px; /* width of the whole navigation bar*/
+	margin:0 auto;
+	}
+#navulliArchivesPage {
+	position:relative;
+	float: left;
+	left:40px;
+	text-align:center;
+	list-style-type:none; /*clear the format of the list*/
+	width:450px; /* width of the individual tab*/
+	line-height:35px;
+	font-size:18px;
+}
+#navulliArchivesPage a{
+	color:#555555;
+	display:block;
+}
+#navulliArchivesPage a:hover{
+	background:	#F5F5F5;	
+}
