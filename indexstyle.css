@@ -1,7 +1,7 @@
 body,div{padding:0; margin:0;} 
 body{
-	font-family: "sans serif", Arial;
-	font-size:14px;
+	font-family: Avenir,"sans serif", Arial;
+	
 	
 	background:#ffffff;
 	TEXT-ALIGN: center;
@@ -14,33 +14,40 @@ body{
 	height: 100%;
 	margin: 0 auto; /*center*/
 	padding:0;
+	padding-bottom:0px;
 }
 #header{
+	text-align:center;
 	padding:0;
 	border-bottom:3px solid #ffd700;
 	height:100px;
 	background: #008844;
+	
 }
 #header ul{
 	width: 100%;
-	margin:0 auto;
+	margin-top:0;
+	margin-left:150px;
 	}
 #header ul li{
 	padding:0;
-	margin-left: auto;
+	margin-left: 10px;
 	margin-right: auto;
-	float: left;
+	margin-top:0;
+	float: center;
 	list-style-type:none; /*clear the format of the list*/
 	
 }
 #header ul li a{
-	padding:0;
+	margin-top:0;
+	padding-top:0;
+	padding-left: 90px;
 	width:500;
 	height:40px;
-	line-height:100px;
+	line-height:80px;
 	color:#FFF;
-	font-size:30px;
-	font-weight:bold;
+	font-size:28px;
+	
 	display:block;
 	text-align:left;
 	text-decoration:none;
@@ -51,7 +58,9 @@ body{
 	background:	#DDDDDD;
 	height:35px;
 	width:100%;
-	border:1px solid #003344；		
+	border:1px solid #003344；
+	margin-bottom:0;
+	padding-bottom:0;		
 	
 }
 #nav ul{
@@ -69,7 +78,7 @@ body{
 }
 #nav ul li a{
 	padding:0;
-	width:150px;
+	width:200px;
 	height:35px;
 	line-height:35px;
 	color:#555555;
@@ -85,33 +94,60 @@ body{
 	background:	#F5F5F5;	
 }
 
-
-
 #content{
-	margin-left: auto;
+
+	margin-top: 0;
+	width:100%;
+	height:100%;
+	padding: 0;
+	padding-bottom:60px;
+	text-align: center;
+}
+
+#content1{
+	margin-left: 30%;
 	margin-right: auto;
-	width:800px;
-	height:300px;
-	padding: 5%;
+	width:40%;
+	height:100%;
+	
+	padding-bottom:60px;
+	text-align: left;
 }
 
 #footer{
 	clear: both; /*make footer and content into alignment*/
-	height:66px;
+	height:60px;
+	width:100%;
 	border-top:5px solid #999999;
+	border-bottom:0;
+	position:absolute;
 }
-
 
 
 h1{
 	font-size:18px;
+	TEXT-ALIGN: left;
+	margin-left: 100px;
+	margin-top: 30px;
+	color:#FFF;
+	font-weight:normal;
 	 
 }
 
 h2{
-	font-size:14px;
+	font-size:18px;
+	color:#555555;
+	TEXT-ALIGN: center;
+
 	
 }
+h3{
+	font-size:16px;
+	color:#555555;
+	font-weight:normal;
+	
+}
+
 
 a:link{
 	color:#336633;
