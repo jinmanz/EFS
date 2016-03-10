@@ -1,133 +1,3 @@
-body{
-	padding:0; 
-	margin:0;
-	font-family: Avenir,"sans serif", Arial;
-	background:#ffffff;
-	width:100%;
-	height:100%;
-}
-#img {
-	position: relative;
-	top:20px;
- 	width:200px;
- 	height:60px;
- 	text-align:left;
-}
-#header{
-	padding:0;
-	border-bottom:3px solid #ffd700;
-	height:100px;
-	background: #008844;
-}
-#title {
-	position: relative;
-	left:250px; 
-	top:-50px;
-	color:#FFF;
-	font-size:28px;
-}
-#nav{
-	background:	#DDDDDD;
-	height:35px;
-	width:100%;
-}
-
-#navUL{
-	width: 1200px;
-	margin:0 auto;
-	}
-
-#navulli {
-	position:relative;
-	margin-left: auto;
-	margin-right: auto;
-	float: left;
-	text-align:center;
-	list-style-type:none; /*clear the format of the list*/
-	width:150px;
-	line-height:35px;
-	font-size:18px;
-}
-
-#navulli a{
-	color:#555555;
-	display:block;
-}
-
-	
-#navulli a:hover{
-	background:	#F5F5F5;	
-}
-
-
-
-#content{
-
-	margin-top: 0;
-	width:100%;
-	height:100%;
-	padding: 0;
-	padding-bottom:60px;
-	text-align: center;
-}
-
-#content1{
-	margin-left: 30%;
-	margin-right: auto;
-	width:40%;
-	height:100%;
-	
-	padding-bottom:60px;
-	text-align: left;
-}
-
-#footer{
-	clear: both; /*make footer and content into alignment*/
-	height:60px;
-	width:100%;
-	border-top:5px solid #999999;
-	border-bottom:0;
-	position:absolute;
-}
-
-
-h1{
-	font-size:18px;
-	TEXT-ALIGN: left;
-	margin-left: 100px;
-	margin-top: 30px;
-	color:#FFF;
-	font-weight:normal;
-	 
-}
-
-h2{
-	font-size:18px;
-	color:#555555;
-
-	
-}
-h3{
-	font-size:16px;
-	color:#555555;
-	font-weight:normal;
-	
-}
-a:link{
-	color:#336633;
-	text-decoration: none;
-	
-}
-
-a:visited{
-	color:#663300;
-	text-decoration: none;
-}
-
-a:hover{
-	
-}
-
 #table {
 	width: 1100px;
 	margin-left: 10px;
@@ -136,3 +6,30 @@ a:hover{
 td {
 	padding: 5px;
  }
+#TitleAdminPage {
+	position: relative;
+	left:250px; 
+	top:-45px;
+	color:#FFF;
+	font-size:25px;
+}
+#navULAdminPage{
+	width:1200px; /* width of the whole navigation bar*/
+	margin:0 auto;
+	}
+#navulliAdminPage {
+	position:relative;
+	float: left;
+	text-align:center;
+	list-style-type:none; /*clear the format of the list*/
+	width:150px; /* width of the individual tab*/
+	line-height:35px;
+	font-size:18px;
+}
+#navulliAdminPage a{
+	color:#555555;
+	display:block;
+}
+#navulliAdminPage a:hover{
+	background:	#F5F5F5;	
+}

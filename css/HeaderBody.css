@@ -1,0 +1,84 @@
+/* Section 1. 100% Reusable info*/
+body{ 
+	margin:0;
+	font-family: Avenir,"sans serif", Arial;
+	background:#ffffff;
+	width:100%;
+	height:100%;
+}
+#img {
+	position: relative;
+	top:25px;
+	left:10px;
+ 	width:200px;
+ 	height:50px;
+}
+#header{
+	border-bottom:3px solid #ffd700;
+	height:100px;
+	background: #008844;
+}
+#nav{
+	background:	#DDDDDD;
+	height:35px;
+}
+a:link{
+	color:#336633;
+	text-decoration: none;
+}
+a:visited{
+	color:#663300;
+	text-decoration: none;
+}
+#footer {
+	position:relative;
+	top:550px;
+}
+
+/* SECTION 2*/
+
+/* IDs for html tags need to be changed for tags for your specific page,
+because we have different number of tabs on the navigation bar and width will
+be different for each page.
+
+Please adjust positioning of the title for your page by changing
+1. ID name for this section (#HomePageTitle to #AdminPageTitle for example)
+ for your specific page
+2. left, top, where left means indent from left, top means indent from top :) */
+#HomePageTitle {
+	position: relative;
+	left:250px; 
+	top:-58px;
+	color:#FFF;
+	font-size:25px;
+}
+
+/* Please adjust the size of the navigation bar for your page by changing
+1. ID name for this section (#navUL to for example #AdminPagenavUL) for your specific page
+2. Width of the navigation bar*/
+#navUL{
+	width:800px; /* width of the whole navigation bar*/
+	margin:0 auto;
+	}
+/* Please adjust the size of the tabs for your page by changing
+1. ID name for this section (#navulli) and for other sections that use
+the same id, such as #navulli a.
+2. Width of the tabs in the navigation bar*/
+#navulli {
+	position:relative;
+	float: left;
+	text-align:center;
+	list-style-type:none; /*clear the format of the list*/
+	width:200px; /* width of the individual tab*/
+	line-height:35px;
+	font-size:18px;
+}
+/* this last section will just need a new id that you changed for 'navulli'
+because these elements are within that section */
+#navulli a{
+	color:#555555;
+	display:block;
+}
+#navulli a:hover{
+	background:	#F5F5F5;	
+}
