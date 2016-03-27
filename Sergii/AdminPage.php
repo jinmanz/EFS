@@ -15,7 +15,7 @@
 
 	<section id="nav">
 				<ul id="navULAdminPage">
-					<li id="navulliAdminPage"><a href="">Home</a></li>
+					<li id="navulliAdminPage"><a href="../Jinman/index.html">Home</a></li>
 					<li id="navulliAdminPage"><a href="">Help</a></li>
 					<li id="navulliAdminPage"><a href=" ">Archives</a></li>	
 					<li id="navulliAdminPage"><a href=" ">Profile Settings</a></li>
