@@ -1,6 +1,6 @@
 <?php
 
-include('library.php');
+include'library1.php';
 
 $query = "SELECT submissionumber, headline, synopsis, submissiondate FROM news";
 
@@ -17,14 +17,15 @@ echo 	'<tr>
 
 while ($row = mysql_fetch_array($result)) {
 
-echo 	'<tr>
-			<td>' . $row['submissionumber'] . 	'</td>' .
-			'<td>' . $row['headline'] . 		'</td>' .
-			'<td>' . $row['synopsis'] .			'</td>' .
-			'<td>' . $row['submissiondate'] . 	'</td>' .
-			'<td>' . $row['submissiondate'] . 	'</td>'
-		'</tr>';
+$SubNum 	= $row['submissionumber'];
+$Head 		= $row['headline'];
+$Synop 		= $row['synopsis'];
+$SubDate 	= $row['submissiondate'];
+$SubDate 	= $row['submissiondate'];
+
+echo "<tr><td>".$SubNum."</td><td>".$Head."</td><td>".$Synop."</td><td>".$SubDate."</td><td>".$SubDate."</td></tr>";
 }
+
 echo '</table>';
 
 mysql_close();
