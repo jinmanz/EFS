@@ -1,36 +1,37 @@
 #table {
+	position:relative;
+	top:0px;
 	width: 1100px;
-	margin-left: 10px;
+	margin-left: 30px;
 }
+
 td {
 	padding: 5px;
  }
-#TitleArchivesPage {
+#TitleFullRecord {
 	position: relative;
 	left:250px; 
 	top:-45px;
 	color:#FFF;
 	font-size:25px;
 }
-
-#navULArchivesPage{
-	width:1200px; /* width of the whole navigation bar*/
+#navULFullRecord{
+	width:500px; /* width of the whole navigation bar*/
 	margin:0 auto;
 	}
-#navulliArchivesPage {
+#navulliFullRecord {
 	position:relative;
 	float: left;
-	left:40px;
 	text-align:center;
 	list-style-type:none; /*clear the format of the list*/
-	width:450px; /* width of the individual tab*/
+	width:250px; /* width of the individual tab*/
 	line-height:35px;
 	font-size:18px;
 }
-#navulliArchivesPage a{
+#navulliFullRecord a{
 	color:#555555;
 	display:block;
 }
-#navulliArchivesPage a:hover{
+#navulliFullRecord a:hover{
 	background:	#F5F5F5;	
 }
