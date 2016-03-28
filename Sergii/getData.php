@@ -29,8 +29,8 @@ echo 		'<tr><td>'.$SubNum.'</td>
 			<td>'.$Synop.'</td>
 			<td>'.$SubDate.'</td>
 			<td>'.$SubDate.'</td>';
-echo		"<td> <a href='FullRecord.php?edit=$row[newsid]'>View</a></td></tr>";
-			
+echo		"<td> <a href='FullRecord.php?edit=$row[newsid]' id='view'>View</a></td></tr>";
+
 }
 
 echo '</table> </div>';
