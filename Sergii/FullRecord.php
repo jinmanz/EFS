@@ -6,10 +6,11 @@
 </head>
 
 <body>
+
 	<section id="container">
 			<section id="header">
 				<img id="img" src="../Images/UA-COLOUR-REVERSE.png">
-				<p id="TitleFullRecord"> Detailed record </p>
+				<p id="TitleFullRecord"> Detailed record for #<?php $id = $_GET['edit']; echo $id; ?> </p>
 			</section>
 	</section>
 
@@ -71,4 +72,5 @@ echo '</table> </div>';
 mysql_close();
 
 ?>
-
+</body>
+</html>
