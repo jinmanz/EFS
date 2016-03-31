@@ -1,10 +1,15 @@
-#table {
-	position:relative;
-	top:0px;
-	width: 1100px;
+#sendEmail {
 	margin-left: 30px;
 }
 
+#table {
+	position:relative;
+	top:0px;
+	width: 1050px;
+	margin-left: 30px;
+	table-layout: auto;
+	white-space: normal;
+}
 td {
 	padding: 5px;
  }
