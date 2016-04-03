@@ -2,9 +2,9 @@
 
 include'../mysql_connection.php';
 
-$query = 	"SELECT newsid, headline, synopsis, submissiondate FROM news
+$query = 	"SELECT newsid, headline, synopsis, submissiondate,submissiontype FROM news
 			UNION ALL 
-			SELECT eventid, tittle, synopsis, submissiondate FROM event
+			SELECT eventid, tittle, synopsis, submissiondate, submissiontype FROM event
 			ORDER BY submissiondate";
 
 $result = mysql_query($query);
@@ -25,14 +25,15 @@ $SubNum 	= $row['newsid'];
 $SubHead 	= $row['headline'];
 $SubSynop 	= $row['synopsis'];
 $SubDate 	= $row['submissiondate'];
+$SubType 	= $row['submissiontype'];
 
 echo 		'<tr>
 			<td>'.$SubNum.'</td>
 			<td>'.$SubHead.'</td>
 			<td>'.$SubSynop.'</td>
-			<td> News/Events</td>
+			<td>'.$SubType.'</td>
 			<td>'.$SubDate.'</td>';
-echo		"<td> <a href='FullRecord.php?edit=$row[headline]' id='view'>View</a></td></tr>";
+echo		"<td> <a href='FullRecord.php?edit=$row[newsid]' id='view'>View</a></td></tr>";
 
 }
 
