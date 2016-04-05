@@ -30,26 +30,33 @@ include'../mysql_connection.php';
 
 $id = $_GET['edit'];
 
-$query = 	"SELECT newsid, headline, synopsis, comments, content, submissiondate  
-			FROM news where newsid = '$id'";
+$query = 	"SELECT newsid, headline_title, synopsis, comments, contributorid, content, submissiondate, submissiontype, copyrightagree, eventtime, eventlocation, eventdate FROM submissions WHERE newsid = '$id'";
+
 $result = mysql_query($query);
 $row = mysql_fetch_array($result);
-	$SubNum 	= $row['newsid'];
-	$Head 		= $row['headline'];
-	$Synop 		= $row['synopsis'];
-	$Comment	= $row['comments'];
-	$Content    = $row['content'];
-	$SubDate    = $row['submissiondate'];
+	$SubNum 		= $row['newsid'];
+	$Head 			= $row['headline_title'];
+	$Synop 			= $row['synopsis'];
+	$Comment		= $row['comments'];
+	$Content   	 	= $row['content'];
+	$SubDate   		= $row['submissiondate'];
+	$SubType   	 	= $row['submissiontype'];
+	$CopyRight 	 	= $row['copyrightagree'];
+	$EventTime    	= $row['eventtime'];
+	$eventlocation  = $row['eventlocation'];
+	$eventdate    	= $row['eventdate'];
 
-$query2 = 	"SELECT firstname, surname, email, phone, contributortype
-			FROM contributor where contributorid = '$id'";
+	$Contrib 		= $row['contributorid'];
+
+$query2 = 	"SELECT firstname, surname, email, relationEFS,
+			FROM contributor where contributorid = '$Contrib'";
+
 $result2 = mysql_query($query2);
 $row2 = mysql_fetch_array($result2);
 	$FirstName 			= $row2['firstname'];
 	$Surname 			= $row2['surname'];
 	$Email 				= $row2['email'];
-	$Phone 				= $row2['phone'];
-	$ContributorType 	= $row2['contributortype'];
+	$RelationEFS 		= $row2['relationEFS'];
 
 	echo 	'<div id="table"> <table border ="1"> <tr> 
 			<th>Submission number</th>
@@ -69,37 +76,53 @@ $row2 = mysql_fetch_array($result2);
 		</tr>
 		<tr> 
 			<th>Content</th>
-			<td id="FullRecTd">'.$Content.'</td>
+			<td>'.$Content.'</td>
 		</tr>
 		<tr> 
 			<th>Submission date</th>
 			<td>'.$SubDate.'</td>
 		</tr>
 		<tr> 
+			<th>Submission Type</th>
+			<td>'.$SubType.'</td>
+		</tr>
+		<tr> 
+			<th>Copyright agreement</th>
+			<td>'.$CopyRight.'</td>
+		</tr>';
+		if (!empty($EventTime))	{ 
+			echo '<tr> 
+			<th>Event time</th>
+			<td>'.$EventTime.'</td>
+		</tr>';
+		}
+		if (!empty($eventlocation))	{ 
+			echo '<tr> 
+			<th>Event time</th>
+			<td>'.$eventlocation.'</td>
+		</tr>';
+		}
+		if (!empty($eventdate))	{ 
+			echo '<tr> 
+			<th>Event date</th>
+			<td>'.$eventdate.'</td>
+		</tr>';
+		}
+
+echo	'<tr> 
 			<th>Contributor name</th>
 			<td>'.$FirstName.' '.$Surname.'</td>
 		</tr>
 		<tr> 
-			<th>Email</th>
+			<th>Contributor Email</th>
 			<td>'.$Email.'</td>
 		</tr>
-		<tr>';
-
-		if (!empty($Phone))	{
-		echo '<tr> 
-			<th>Phone</th>
-			<td>'.$Phone.'</td>
-			</tr>';
-		}
-echo 	'<tr> 
-			<th>Contributor type</th>
-			<td>'.$ContributorType.'</td>
+		<tr> 
+			<th>Relationship to EFS</th>
+			<td>'.$relationEFS.'</td>
 		</tr>';
 
 echo '</table> </div>';
-
-
-
 
 $query3 = 	"SELECT mvid, mvname, contactname, contactemail
 			FROM mediavenue";
@@ -110,15 +133,13 @@ echo 	'<br> <input type="submit" name="reject" value="Reject">
 		</form>';
 
 if (isset($_POST['reject'])) {
-	$query5 = "DELETE FROM news WHERE newsid='$id'";
+	$query5 = "DELETE FROM submissions WHERE newsid='$id'";
 	$result5 = mysql_query($query5);
 		if($result5) {
 			echo "Deleted";
+			header('Location: AdminPage.php');
 		}
-	
 }
-
-
 
 echo '<p id="sendEmail"> Send this submission to:';
 echo '<form action="#" method="post" id="sendEmail">';
