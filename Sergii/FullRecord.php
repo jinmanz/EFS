@@ -48,7 +48,7 @@ $row = mysql_fetch_array($result);
 
 	$Contrib 		= $row['contributorid'];
 
-$query2 = 	"SELECT firstname, surname, email, relationEFS,
+$query2 = 	"SELECT firstname, surname, email, relationEFS
 			FROM contributor where contributorid = '$Contrib'";
 
 $result2 = mysql_query($query2);
@@ -119,7 +119,7 @@ echo	'<tr>
 		</tr>
 		<tr> 
 			<th>Relationship to EFS</th>
-			<td>'.$relationEFS.'</td>
+			<td>'.$RelationEFS.'</td>
 		</tr>';
 
 echo '</table> </div>';
@@ -152,7 +152,7 @@ while ($row3 = mysql_fetch_array($result3)) {
 
 }
 echo 	'<br> <input type="submit" value="Submit"> 
-		</form>';
+		</form> <br>';
 
 
 if (isset($_POST['venue'])) {
@@ -173,9 +173,6 @@ if (isset($_POST['venue'])) {
 		}
 	
 	}
-
-
-
 mysql_close();
 
 ?>

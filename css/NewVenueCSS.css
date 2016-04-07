@@ -1,0 +1,41 @@
+#Margin {
+	margin-left: 30px;
+}
+#table {
+	width: 1100px;
+	margin-left: 90px;
+}
+
+td {
+	padding: 5px;
+ }
+#TitleNewVenue {
+	position: relative;
+	left:250px; 
+	top:-45px;
+	color:#FFF;
+	font-size:25px;
+}
+#navULNewVenue{
+	width:1200px; /* width of the whole navigation bar*/
+	margin:0 auto;
+	}
+#navulliNewVenue {
+	position:relative;
+	float: left;
+	text-align:center;
+	list-style-type:none; /*clear the format of the list*/
+	width:220px; /* width of the individual tab*/
+	line-height:35px;
+	font-size:18px;
+}
+#navulliNewVenue a{
+	color:#555555;
+	display:block;
+}
+#navulliNewVenue:hover{
+	background:	#F5F5F5;	
+}
+#view {
+	color:black;
+}

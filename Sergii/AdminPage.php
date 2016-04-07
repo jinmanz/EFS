@@ -18,9 +18,9 @@
 					<li id="navulliAdminPage"><a href="../Jinman/index.html">Home</a></li>
 					<li id="navulliAdminPage"><a href="../Olga/help.html">Help</a></li>
 					<li id="navulliAdminPage"><a href=" ">Archives</a></li>	
-					<li id="navulliAdminPage"><a href=" ">Profile Settings</a></li>
+					<li id="navulliAdminPage"><a href=" ">Admin Settings</a></li>
 					<li id="navulliAdminPage"><a href=" ">Change Password</a></li>
-					<li id="navulliAdminPage"><a href=" ">Media Venues</a></li>	
+					<li id="navulliAdminPage"><a href="MediaVenues.php">Media Venues</a></li>	
 					<li id="navulliAdminPage"><a href=" ">Log Out</a></li>
 				
 				</ul>
