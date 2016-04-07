@@ -32,16 +32,44 @@ include'../mysql_connection.php';
 
 $mvname = $_GET['edit'];
 
+
 $query = "SELECT mvid FROM mediavenue WHERE mvname = '$mvname'";
 $result = mysql_query($query);
 $row = mysql_fetch_array($result);
-
 $mvid = $row['mvid'];
 
 
-echo '<p id="sendEmail"> Change contact information for venue: '.$mvname.'</p>';
+$query3 =	"SELECT mvname, contactname, contactsurname, contactemail, contactphone 		FROM mediavenue";
 
-echo '<form action="#" method="post" id="sendEmail"> 
+$result3 = mysql_query($query3);
+$row3 = mysql_fetch_array($result3);
+
+echo '<p id="Margin"> Change contact information for venue: '.$mvname.'</p>';
+
+echo '<div id= "Margin"> <table border="1">';
+echo 	'<tr id="Margin">
+			<th>Media venue</th>
+			<th>Contact name</th>
+			<th>Email</th>
+			<th>Phone</th></tr>';
+
+$VenueName 			= $row3['mvname'];
+$ContactName 		= $row3['contactname'];
+$ContactSurname 	= $row3['contactsurname'];
+$ContactEmail 		= $row3['contactemail'];
+$ContactPhone 		= $row3['contactphone'];
+
+echo 		'<tr>
+			<td>'.$VenueName.'</td>
+			<td>'.$ContactName.' '.$ContactSurname.'</td>
+			<td>'.$ContactEmail.'</td>
+			<td>'.$ContactPhone.'</td></tr>';
+
+echo '</table> </div>';
+echo '<br>';
+
+
+echo '<form action="#" method="post" id="Margin"> 
 		New media venue name: <input type="text" name="NewMediaVenueName"><br>
 		New contact first name: <input type="text" name="NewContactFirstName"><br>
 		New contact last name: <input type="text" name="NewContactLastName"><br>
